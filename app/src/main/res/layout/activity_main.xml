@@ -32,9 +32,26 @@
         android:textAllCaps="false"
         android:onClick="stopService"
         android:layout_below="@+id/button2"
-        android:layout_alignLeft="@+id/button2"
-        android:layout_alignStart="@+id/button2"
-        android:layout_alignRight="@+id/button2"
-        android:layout_alignEnd="@+id/button2" />
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:id="@+id/btnBind"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Bind to Service"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/button"
+        android:onClick="bindService"/>
+
+
+    <Button
+        android:id="@+id/btnUnbind"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Unbind from Service"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/btnBind"
+        android:onClick="unBindService"/>
+
 
 </RelativeLayout>
