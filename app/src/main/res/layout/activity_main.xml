@@ -53,5 +53,27 @@
         android:layout_below="@+id/btnBind"
         android:onClick="unBindService"/>
 
+    <EditText
+        android:id="@+id/number"
+        android:hint="Enter Number"
+        android:layout_below="@+id/btnUnbind"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/result"
+        android:hint="Result"
+        android:textSize="25dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/number"/>
+    <Button
+        android:id="@+id/factorial"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/result"
+        android:text="find factorial"
+        android:onClick="factorial"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
 
 </RelativeLayout>

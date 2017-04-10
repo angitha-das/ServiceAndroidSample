@@ -15,18 +15,6 @@ public class MyService extends Service {
      * killed :START_STICKY,START_NOT_STICKY,START_REDELIVER_INTENT*/
     int mStartMode;
 
-    /** interface for clients that bind */
-    IBinder mBinder;
-
-    /** indicates whether onRebind should be used */
-    boolean mAllowRebind;
-
-    @Nullable
-    @Override
-    public IBinder onBind(Intent intent) {
-        return null;
-    }
-
     @Override
     public void onCreate() {
         super.onCreate();
@@ -40,22 +28,16 @@ public class MyService extends Service {
         return START_STICKY;    //mStartMode
     }
 
-    /** Called when all clients have unbound with unbindService() */
-    @Override
-    public boolean onUnbind(Intent intent) {
-        return mAllowRebind;
-    }
-
-    /** Called when a client is binding to the service with bindService()*/
-    @Override
-    public void onRebind(Intent intent) {
-
-    }
-
     @Override
     public void onDestroy() {
         super.onDestroy();
         Toast.makeText(this, "Service Destroyed", Toast.LENGTH_LONG).show();
+    }
+
+    @Nullable
+    @Override
+    public IBinder onBind(Intent intent) {
+        return null;
     }
 
 }

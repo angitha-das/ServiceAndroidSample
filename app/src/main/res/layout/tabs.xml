@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#3E80B4"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/txt_dia"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:layout_margin="10dp"
+        android:text="Download Dialog"
+        android:textColor="@android:color/white"
+        android:textSize="15dp"
+        android:textStyle="bold" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#c0c0c0"/>
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="#3E80B4"
+        android:layout_margin="10dp"
+        android:orientation="vertical">
+
+       <EditText
+           android:id="@+id/edittext"
+           android:hint="Enter url here"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/download"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/white"
+            android:clickable="true"
+            android:text="Download"
+            android:textColor="#5DBCD2"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+</LinearLayout>
