@@ -12,10 +12,14 @@ import android.widget.Toast;
  */
 
 public class BoundService extends Service {
-    /** interface for clients that bind */
+    /**
+     * interface for clients that bind
+     */
     private final IBinder mBinder = new MyBinder();
 
-    /** indicates whether onRebind should be used */
+    /**
+     * indicates whether onRebind should be used
+     */
     boolean mAllowRebind;
 
 
@@ -26,14 +30,18 @@ public class BoundService extends Service {
         return mBinder;
     }
 
-    /** Called when all clients have unbound with unbindService() */
+    /**
+     * Called when all clients have unbound with unbindService()
+     */
     @Override
     public boolean onUnbind(Intent intent) {
         Toast.makeText(this, "ON UN-BIND", Toast.LENGTH_SHORT).show();
         return mAllowRebind;
     }
 
-    /** Called when a client is binding to the service with bindService()*/
+    /**
+     * Called when a client is binding to the service with bindService()
+     */
     @Override
     public void onRebind(Intent intent) {
         Toast.makeText(this, "ON RE-BIND", Toast.LENGTH_SHORT).show();
@@ -46,14 +54,14 @@ public class BoundService extends Service {
     }
 
     public int findFactorial(int num) {
-        int fact =1;
-        for(int i=1;i<=num;i++){
+        int fact = 1;
+        for (int i = 1; i <= num; i++) {
             fact = fact * i;
         }
         return fact;
     }
 
-    public class MyBinder extends Binder {
+    class MyBinder extends Binder {
         BoundService getService() {
             return BoundService.this;
         }

@@ -59,13 +59,12 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    public void factorial(View view){
+    public void factorial(View view) {
         if (mServiceBound) {
             int num = Integer.parseInt(text.getText().toString());
             int result = mBoundService.findFactorial(num);
-            resultFactoral.setText("Factorial = "+ result);
-        }
-        else  {
+            resultFactoral.setText("Factorial = " + result);
+        } else {
             Toast.makeText(mBoundService, "Please Bound Service first", Toast.LENGTH_SHORT).show();
         }
     }

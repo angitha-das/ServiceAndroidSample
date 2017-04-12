@@ -11,9 +11,10 @@ import android.widget.Toast;
  */
 
 public class MyService extends Service {
-    /** indicates how to behave if the service is
-     * killed :START_STICKY,START_NOT_STICKY,START_REDELIVER_INTENT*/
-    int mStartMode;
+    /**
+     * indicates how to behave if the service is
+     * killed :START_STICKY,START_NOT_STICKY,START_REDELIVER_INTENT
+     */
 
     @Override
     public void onCreate() {
